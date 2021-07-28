@@ -38,7 +38,7 @@ public class ReadThreadServer implements Runnable {
         }
     }
 
-    void buyAction (String to, Player toBuy) {
+    synchronized void buyAction (String to, Player toBuy) {
         ArrayList < Player > arrayList2 = server.clubPlayers.getOrDefault(to, new ArrayList<>());
         toBuy.setClub(to);
         toBuy.setMarket(0);

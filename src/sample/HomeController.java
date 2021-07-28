@@ -76,7 +76,12 @@ public class HomeController implements Initializable {
     void cancelFilterButton(ActionEvent event) {
         initFilter();
         showQuery();
-
+        minSalary.setText("");
+        minAge.setText("");
+        minHeight.setText("");
+        maxAge.setText("");
+        maxHeight.setText("");
+        maxSalary.setText("");
     }
 
     @FXML
