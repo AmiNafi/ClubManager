@@ -35,6 +35,10 @@
     -fx-border-radius: 30;
     -fx-background-radius: 30;
 }
+.form-background {
+    -fx-background-color: #5735ef;
+    -fx-border-color: #2A2E32;
+}
 
 .player-background {
     -fx-background-color: #FFFFFFFF;
