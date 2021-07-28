@@ -147,8 +147,10 @@ public class HomeController implements Initializable {
             currentPlayers = marketPlayers;
         }
         else currentPlayers = clubPlayers;
+        /*
         System.out.println(" Here we get " + currentPlayers.size());
         System.out.println(" Here we get " + state);
+         */
         showData();
     }
     private final double inf = 1000000007.0;
