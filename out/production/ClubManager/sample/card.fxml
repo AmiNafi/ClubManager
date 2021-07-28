@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="box" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="327.0" spacing="10.0" styleClass="card-style" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CardController">
+<HBox fx:id="box" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="327.0" spacing="10.0" styleClass="card-style" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CardController">
    <children>
       <ImageView fx:id="profilePic" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -78,7 +78,7 @@
             </Label>
             <HBox fx:id="buyButton" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="buyButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="buy-button" stylesheets="@../css/style.css" text="Buy" textFill="WHITE">
+                  <Button fx:id="transferButton" mnemonicParsing="false" onAction="#transferAction" prefHeight="26.0" prefWidth="91.0" styleClass="buy-button" stylesheets="@../css/style.css" text="Buy" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
