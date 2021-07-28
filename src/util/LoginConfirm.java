@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class LoginConfirm implements Serializable {
     private String clubName, password;
     private ArrayList<Player> currentClubPlayers, marketPlayers;
-    private boolean status, type;
+    private boolean status, type, logout;
     public LoginConfirm () {
         status = false;
         type = false;
@@ -16,14 +16,22 @@ public class LoginConfirm implements Serializable {
         password = "";
         currentClubPlayers = new ArrayList<>();
         marketPlayers = new ArrayList<>();
+        type = false;
+        logout = false;
     }
 
 
     public void setType(boolean type) {
         this.type = type;
     }
+    public void setLogout(boolean logout) {
+        this.logout = logout;
+    }
     public boolean getType() {
         return this.type;
+    }
+    public boolean getLogout() {
+        return this.logout;
     }
     public String getPassword() {
         return password;

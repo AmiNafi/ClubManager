@@ -48,7 +48,7 @@ public class ReadThread implements Runnable {
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
-                                } else {
+                                } else if (!loginConfirm.getLogout()){
                                     main.showAlertIncorrectPassword();
                                 }
 

@@ -54,7 +54,7 @@ public class Main extends Application {
         showLoginPage();
     }
 
-    private void connectToServer() throws IOException {
+    public void connectToServer() throws IOException {
         String serverAddress = "127.0.0.1";
         int serverPort = 33333;
         networkUtil = new NetworkUtil(serverAddress, serverPort);
@@ -126,6 +126,13 @@ public class Main extends Application {
         alert.setTitle("Incorrect Information");
         alert.setHeaderText("Incorrect Information");
         alert.setContentText("Provided Information is not correct.");
+        alert.showAndWait();
+    }
+    public void showAllertAlreadyLoggedIn() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("User Already Logged In");
+        alert.setHeaderText("User Already Logged IN");
+        alert.setContentText("Please Log Out First");
         alert.showAndWait();
     }
     public static void main(String[] args) {

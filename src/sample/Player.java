@@ -11,6 +11,7 @@ public class Player implements Serializable {
         name = club = position = "";
         age = number = 0;
         height = weeklySalary = 0.0;
+        price = 10000;
     }
     public Player (String name, String country, int age, double height, String club, String  position, int number, double weeklySalary) {
         this.name = name;

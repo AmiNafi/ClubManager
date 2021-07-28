@@ -76,6 +76,9 @@ public class ReadThreadServer implements Runnable {
                     if (o instanceof LoginConfirm) {
                         //LoginConfirm loginMessage = (LoginConfirm) o;
                         LoginConfirm loginMessage = (LoginConfirm) o;
+                        if (loginMessage.getLogout()) {
+                            server.clientMap.remove(loginMessage.getClubName());
+                        }
                         if (loginMessage.getType() && server.userMap.get(loginMessage.getClubName()) == null) {
                             server.userMap.put(loginMessage.getClubName(), loginMessage.getPassword());
                         }

@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import util.LoginConfirm;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -131,6 +132,18 @@ public class HomeController implements Initializable {
         showQuery();
     }
 
+    @FXML
+    void logOutAction(ActionEvent event) {
+        try {
+            LoginConfirm l = new LoginConfirm();
+            l.setLogout(true);
+            l.setClubName(main.getClientName());
+            main.getNetworkUtil().write(l);
+            main.showLoginPage();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     void searchButton(ActionEvent event) {
         sName = nameSearch.getText();
